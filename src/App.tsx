@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Button from './components/Button'
+import Button from './components/Button';
 
 const App: React.FC = () => {
   const handleClick = (e: any) => console.log("clicked")

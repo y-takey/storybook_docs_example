@@ -1,0 +1,38 @@
+import { action } from "@storybook/addon-actions";
+import { Story, Meta, Preview, Props, Source, Description } from "@storybook/addon-docs/blocks";
+
+import Button from "./Button";
+import ButtonWithState from "./with_state";
+
+<Meta
+  title="セクションA|Components/Button"
+  parameters={{
+    component: Button,
+    notes: "This is notes;",
+    info: "This is info.",
+  }}
+/>
+
+# Button
+
+何の変哲もない、ただのボタン。
+
+<Source code={`import Button from "~/components/Button";`} />
+
+<Preview withSource="open">
+  <Story name="basic" >
+    <Button label="this is src" onClick={action('clicked')} />
+  </Story>
+</Preview>
+
+<Props of="." />
+
+<Description of="." type="notes" />
+
+<Description of="." type="info" />
+
+<Preview>
+  <Story name="with state" >
+    <ButtonWithState  />
+  </Story>
+</Preview>
